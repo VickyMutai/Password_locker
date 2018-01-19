@@ -71,8 +71,7 @@ class TestCredentials(unittest.TestCase):
         self.new_account.save_account()
         test_account = credentials("Account","Testname","TestPass")
         test_account.save_account()
-
-        account_exists = credentials.credential_list("Account")
+        account_exists = credentials.account_exists("Account")
         self.assertTrue(account_exists)
 
 
