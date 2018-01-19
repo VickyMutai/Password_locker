@@ -1,5 +1,5 @@
 import unittest #import the unittest module
-from passlocker import details #importing credentials classs
+from passlocker import credentials #importing credentials classs
 
 class TestCredentials(unittest.TestCase):
     '''
@@ -12,7 +12,7 @@ class TestCredentials(unittest.TestCase):
         '''
         set up method to run before each test cases
         '''
-        self.new_account = Credentials("Account","Testname","TestPass")
+        self.new_account = credentials("Account","Testname","TestPass")
 
     def test_init(self):
         '''
