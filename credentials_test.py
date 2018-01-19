@@ -35,7 +35,7 @@ class TestCredentials(unittest.TestCase):
         self.new_account.save_account() #saving the new account
         self.assertEqual(len(credentials.credential_list),1)
 
-    def test_save_multiple_accounts(self):
+    def test_save_multiple_accounts(self): #third test
         '''
         test to check if one can save multiple accounts
         '''
@@ -43,5 +43,15 @@ class TestCredentials(unittest.TestCase):
         test_account = credentials("Account","Testname","TestPass")
         test_account.save_account()
         self.assertEqual(len(credentials.credential_list),2)
+
+    def test_delete_credentials(self): #fourth test
+        '''
+        test to check if one can delete account credentials
+        '''
+        self.new_account.save_account()
+        test_account = credentials("Account","Testname","TestPass")
+        test_account.save_account()
+        self.new_account.delete_account() #deleting credentials
+        self.assertEqual(len(credentials.credential_list),1)
 if __name__ == '__main__':
     unittest.main()
