@@ -33,5 +33,7 @@ class credentials:
             account credentials
         '''
         for account in cls.credential_list:
-            if contact.user_name == user_name:
+            if account.account_name == account_name:
                 return account
+
+    # def account_exists(cls,)

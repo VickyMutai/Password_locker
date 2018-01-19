@@ -63,5 +63,18 @@ class TestCredentials(unittest.TestCase):
         test_account.save_account()
         found_account = credentials.find_by_account("Account")
         self.assertEqual(found_account.user_name, test_account.user_name)
+
+    def test_account_exists(self):
+        '''
+        test to check if account really exists
+        '''
+        self.new_account.save_account()
+        test_account = credentials("Account","Testname","TestPass")
+        test_account.save_account()
+
+        account_exists = credentials.credential_list("Account")
+        self.assertTrue(account_exists)
+
+
 if __name__ == '__main__':
     unittest.main()
