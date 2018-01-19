@@ -1,5 +1,6 @@
 import unittest #import the unittest module
-from passlocker import credentials #importing credentials classs
+import pyperclip
+from passlocker import credentials #importing credentials class
 
 class TestCredentials(unittest.TestCase):
     '''
@@ -80,6 +81,13 @@ class TestCredentials(unittest.TestCase):
         '''
         self.assertEqual(credentials.display_accounts(),credentials.credential_list)
 
+    def test_copy_credentials(self):
+        '''
+        test to confirm that we are copying credentials from an account
+        '''
+        self.new_account.save_account()
+        credentials.copy_credentials("Account")
+        self.assertEqual(self.new_account.account,pyperclip.paste())
 
 if __name__ == '__main__':
     unittest.main()
