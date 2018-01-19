@@ -2,10 +2,11 @@ class credentials:
     '''
     class that generates new instances of credentials
     '''
-def __init__(self,account_name,user_name,password):
-    '''
-    init method helps us define properties for our objects
-    '''
-    self.account_name = account_name
-    self.user_name = user_name
-    self.password = password
+    credential_list = []
+    def __init__(self,account_name,user_name,password):
+        '''
+        init method helps us define properties for our objects
+        '''
+        self.account_name = account_name
+        self.user_name = user_name
+        self.password = password
