@@ -16,3 +16,9 @@ class credentials:
         save contact object into credential_list
         '''
         credentials.credential_list.append(self)
+
+    def delete_account(self):
+        '''
+        delete account
+        '''
+        credentials.credential_list.remove(self)
