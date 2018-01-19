@@ -54,7 +54,7 @@ class TestCredentials(unittest.TestCase):
         self.new_account.delete_account() #deleting credentials
         self.assertEqual(len(credentials.credential_list),1)
 
-    def test_find_account_by_account_name(self):
+    def test_find_account_by_account_name(self): #fifth test
         '''
         test to search for account details
         '''
@@ -64,7 +64,7 @@ class TestCredentials(unittest.TestCase):
         found_account = credentials.find_by_account("Account")
         self.assertEqual(found_account.user_name, test_account.user_name)
 
-    def test_account_exists(self):
+    def test_account_exists(self): #sixth test
         '''
         test to check if account really exists
         '''
@@ -73,6 +73,12 @@ class TestCredentials(unittest.TestCase):
         test_account.save_account()
         account_exists = credentials.account_exists("Account")
         self.assertTrue(account_exists)
+
+    def test_display_accounts(self): #seventh test
+        '''
+        test to display accounts
+        '''
+        self.assertEqual(credentials.display_accounts(),credentials.credential_list)
 
 
 if __name__ == '__main__':
