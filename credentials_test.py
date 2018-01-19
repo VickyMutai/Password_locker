@@ -14,6 +14,12 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_account = credentials("Account","Testname","TestPass")
 
+    def tearDown(self):
+        '''
+        clean up after each test case has run
+        '''
+        credentials.credential_list = []
+
     def test_init(self): #first test
         '''
         test if the object is initialized properly
