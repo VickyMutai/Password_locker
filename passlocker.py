@@ -22,3 +22,16 @@ class credentials:
         delete account
         '''
         credentials.credential_list.remove(self)
+
+    @classmethod
+    def find_by_account(cls,account_name):
+        '''
+        search for account, returns a list containing the account credentials
+        args:
+             account_name: that will be used to search
+        Returns:
+            account credentials
+        '''
+        for account in cls.credential_list:
+            if contact.user_name == user_name:
+                return account
