@@ -30,3 +30,9 @@ def check_existing_account(account_name):
     function that checks if account exists
     '''
     return credentials.account_exists(account_name)
+
+def display_accounts():
+    '''
+    function that returns saved accounts
+    '''
+    return credentials.display_accounts()
