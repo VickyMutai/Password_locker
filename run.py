@@ -39,3 +39,11 @@ def display_accounts():
 
 
 def main():
+    print("--------------------Password Locker-------------------")
+    print('''    Do you ever want to easily access your passwords
+    without having to memorize??
+    Well here is a chance to save all your passwords in a
+    single location''')
+
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,9 @@
 import pyperclip
+class user:
+    '''
+    class that generates new instances of user account
+    '''
+    
 class credentials:
     '''
     class that generates new instances of credentials
