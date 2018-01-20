@@ -24,3 +24,9 @@ def find_account(account_name):
     function to find account by account name
     '''
     return credentials.find_by_account(account_name)
+
+def check_existing_account(account_name):
+    '''
+    function that checks if account exists
+    '''
+    return credentials.account_exists(account_name)
