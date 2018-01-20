@@ -18,3 +18,9 @@ def del_account(account):
     function to delete account
     '''
     account.delete_account()
+
+def find_account(account_name):
+    '''
+    function to find account by account name
+    '''
+    return credentials.find_by_account(account_name)
