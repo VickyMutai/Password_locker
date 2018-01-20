@@ -36,3 +36,6 @@ def display_accounts():
     function that returns saved accounts
     '''
     return credentials.display_accounts()
+
+
+def main():
