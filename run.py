@@ -66,9 +66,9 @@ without having to memorize??
         single location''')
     print("\n")
     print("Enter your name here: ")
-    name = input()
+    username = input()
     print("*"*78)
-    print(f"Hello {name}.\nDo you want to enter a password or we automatically generate for you?")
+    print(f"Hello {username}.\nDo you want to enter a password or we automatically generate for you?")
     print('''
         Press:
                     g- generate new password
@@ -78,18 +78,32 @@ without having to memorize??
     if (pwd_click  == 'g'):
         chars = '1234567890abcdefghijklmnop?/@-' #characters to choose from
         length = int(input("Enter the length of password you want: "))
-        pwd = ''
+        pwdinput = ''
         for c in range(length):
-            pwd += random.choice(chars) #generate random password
-        print (pwd)
-        print(f"{name} your password is {pwd}")
+            pwdinput += random.choice(chars) #generate random password
+        print (pwdinput)
+        print(f"{username} your password is {pwdinput}")
 
     else:
         print("enter your password: ")
-        pwd = input()
-        print(f"{name} your password is {pwd}")
+        pwdinput = input()
+        print(f"{username} your password is {pwdinput}")
 
         print("\n"*2)
+
+    print("To continue reenter your details")
+    print("*"*78)
+    print("Enter your username again: ")
+    name = input()
+    print("Enter your password: ")
+    pwd = input()
+    if (name == username and pwd == pwdinput):
+        print('\n')
+        
+
+    else:
+        print('''Incorrect Name or Password
+Run the application again''')
 
 if __name__ == '__main__':
     main()
