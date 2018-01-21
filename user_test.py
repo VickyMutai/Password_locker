@@ -1,4 +1,5 @@
-import unittest #import the unittest module
+import unittest
+import random #import the unittest module
 from passlocker import user
 
 class TestCredentials(unittest.TestCase):

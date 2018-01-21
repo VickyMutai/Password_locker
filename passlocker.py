@@ -1,3 +1,4 @@
+import random
 import pyperclip
 class user:
     '''
@@ -13,6 +14,17 @@ class user:
         save user details into user_list
         '''
         user.user_list.append(self)
+
+    def generate_password(self):
+        '''
+        generate new password
+        '''
+        chars = '1234567890abcdefghijklmnop?/@-' #characters to choose from
+        length = int(input("Enter the length of password you want: "))
+        pwd = ''
+        for c in range(length):
+            pwd += random.choice(chars) #generate random password
+        print (pwd)
 
 class credentials:
     '''

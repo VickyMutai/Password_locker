@@ -1,5 +1,8 @@
 #!/usr/bin/env python3.6
 import passlocker
+#methods for user
+
+#methods for credentials
 def create_account(account_name, user_name, password):
     '''
     function to create new account
