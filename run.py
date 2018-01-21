@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.6
 import random
-import passlocker
+from passlocker import credentials
+from passlocker import user
 #methods for user
 def create_user(name,pwd):
     '''
@@ -99,7 +100,31 @@ without having to memorize??
     pwd = input()
     if (name == username and pwd == pwdinput):
         print('\n')
-        
+        while True:
+            print('''Use the following short codes:
+                  c - create new account to save
+                  d - display accounts saved
+                  f - find saved account
+                  ex - exit
+                  ''')
+            short_code = input().lower()
+            if short_code == 'c':
+                print("---------------------New account--------------------")
+                print("-"*80)
+                print("Account Name: ")
+                account_name = input()
+                print("User Name: ")
+                user_name = input()
+                print("Password for account: ")
+                password = input()
+
+                save_account(create_account(account_name,user_name,password))
+                             #create and save account credentials
+                print('\n' * 1)
+                print (f"New account {account_name} created.")
+                print('\n' * 1)
+
+            break
 
     else:
         print('''Incorrect Name or Password
