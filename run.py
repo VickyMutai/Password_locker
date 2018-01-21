@@ -135,7 +135,16 @@ without having to memorize??
                     print('\n')
                     print("You dont have any saved acccounts yet")
                     print('\n')
-            elif short
+
+            elif short_code == 'f':
+                print("Enter the name of the account you want to search for: ")
+                search_account_name = input()
+                if check_existing_account(search_account_name):
+                    search_account = find_account(search_account_name)
+                    print(f"{search_account.account_name}")
+                    print('-' * 20)
+                    print(f"User Name...................{search_account.user_name}")
+                    print(f"Password...................{search_account.password}")
 
     else:
         print('''Incorrect Name or Password
