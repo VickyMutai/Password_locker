@@ -4,8 +4,15 @@ class user:
     class that generates new instances of user account
     '''
     user_list = []
-    def __init__(self,pwd):
+    def __init__(self,name,pwd):
+        self.name = name
         self.pwd = pwd
+
+    def save_user(self):
+        '''
+        save user details into user_list
+        '''
+        user.user_list.append(self)
 
 class credentials:
     '''

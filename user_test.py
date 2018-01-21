@@ -12,7 +12,7 @@ class TestCredentials(unittest.TestCase):
         '''
         set up method to run before each test cases
         '''
-        self.new_user = user("pwd")
+        self.new_user = user("name","pwd")
 
     def test_init(self):
         '''
