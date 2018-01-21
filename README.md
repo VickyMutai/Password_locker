@@ -30,6 +30,7 @@ This is mainly a python application
 ## Meta
 
 Email me at - [Victoria Mutai](vicky.mutai96@gmail.com)
+<br>
 Github - [VickyMutai](https://github.com/VickyMutai)
 
 ### License
