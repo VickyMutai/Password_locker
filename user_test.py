@@ -27,5 +27,12 @@ class TestCredentials(unittest.TestCase):
         self.new_user.save_user() #saving new user
         self.assertEqual(len(user.user_list),1)
 
+    def test_generate_password(self):
+        '''
+        test to auto-generate password
+        '''
+        self.new_user.generate_password() #generating new password
+        self.assertEqual(self.new_user.pwd,"pwd")
+
 if __name__ == '__main__':
     unittest.main()
