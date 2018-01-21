@@ -7,7 +7,7 @@ It allows you to login by either entering your password or generating the passwo
 ![](img/app.png)
 
 ## Installation
-1. Open the (github repo)[https://github.com/VickyMutai/Password_locker]
+1. Open the [github repo](https://github.com/VickyMutai/Password_locker)
 2. Clone or download the files
 3. Ensure python is installed on your machine
 4. On the terminal for linux or command prompt for windows;
