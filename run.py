@@ -124,7 +124,18 @@ without having to memorize??
                 print (f"New account {account_name} created.")
                 print('\n' * 1)
 
-            break
+            elif short_code == 'd':
+                if display_accounts():
+                    print("Here is a list of all your accounts: ")
+                    print('\n')
+                    for account in display_accounts():
+                        print(f"{account.account_name}  {account.user_name}  {account.password}")
+                        print('\n')
+                else:
+                    print('\n')
+                    print("You dont have any saved acccounts yet")
+                    print('\n')
+            elif short
 
     else:
         print('''Incorrect Name or Password
