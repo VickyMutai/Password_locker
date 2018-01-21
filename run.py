@@ -85,7 +85,7 @@ without having to memorize??
         print (pwdinput)
         print(f"{username} your password is {pwdinput}")
 
-    else:
+    elif (pwd_click == 'c'):
         print("enter your password: ")
         pwdinput = input()
         print(f"{username} your password is {pwdinput}")
@@ -152,8 +152,8 @@ without having to memorize??
             elif short_code == 'ex':
                 print("Thanks for your time! Bye!")
                 break
-        else:
-            print("Sorry didnt get that! Please use the short codes")
+            else:
+                print("Sorry didnt get that! Please use the short codes")
 
     else:
         print('''Incorrect Name or Password
