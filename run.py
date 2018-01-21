@@ -146,6 +146,15 @@ without having to memorize??
                     print(f"User Name...................{search_account.user_name}")
                     print(f"Password...................{search_account.password}")
 
+                else:
+                    print("Account does not exist")
+
+            elif short_code == 'ex':
+                print("Thanks for your time! Bye!")
+                break
+        else:
+            print("Sorry didnt get that! Please use the short codes")
+
     else:
         print('''Incorrect Name or Password
 Run the application again''')
