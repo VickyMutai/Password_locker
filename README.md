@@ -23,15 +23,16 @@ It allows you to login by either entering your password or generating the passwo
 * For linux/ubuntu users
 &nbsp; &nbsp; &nbsp; &nbsp; Git
 
-##Technologies used
+## Technologies used
 
 This is mainly a python application
 
 ## Meta
 
 Email me at - [Victoria Mutai](vicky.mutai96@gmail.com)
-Github username - VickyMutai
+Github - [VickyMutai](https://github.com/VickyMutai)
 
 ### License
 This is an open source software therefore the license is [MIT](https://choosealicense.com/licenses/mit/)
+<br>
 Copyright (c) 2017 **Legacy Softwares**
