@@ -1,6 +1,23 @@
 #!/usr/bin/env python3.6
+import random
 import passlocker
 #methods for user
+def create_user(name,pwd):
+    '''
+    function to create new user
+    '''
+    new_user = user(name,pwd)
+    return new_user
+def save_user(user):
+    '''
+    function to save user details
+    '''
+    user.save_user()
+def generate_password(user):
+    '''
+    function to generate password
+    '''
+    user.generate_password()
 
 #methods for credentials
 def create_account(account_name, user_name, password):
@@ -43,10 +60,36 @@ def display_accounts():
 
 def main():
     print("--------------------Password Locker-------------------")
-    print('''    Do you ever want to easily access your passwords
-    without having to memorize??
-    Well here is a chance to save all your passwords in a
-    single location''')
+    print('''Do you ever want to easily access your passwords
+without having to memorize??
+        Well here is a chance to save all your passwords in a
+        single location''')
+    print("\n")
+    print("Enter your name here: ")
+    name = input()
+    print("*"*78)
+    print(f"Hello {name}.\nDo you want to enter a password or we automatically generate for you?")
+    print('''
+        Press:
+                    g- generate new password
+                    c- create your own password
+          ''')
+    pwd_click = input()
+    if (pwd_click  == 'g'):
+        chars = '1234567890abcdefghijklmnop?/@-' #characters to choose from
+        length = int(input("Enter the length of password you want: "))
+        pwd = ''
+        for c in range(length):
+            pwd += random.choice(chars) #generate random password
+        print (pwd)
+        print(f"{name} your password is {pwd}")
+
+    else:
+        print("enter your password: ")
+        pwd = input()
+        print(f"{name} your password is {pwd}")
+
+        print("\n"*2)
 
 if __name__ == '__main__':
     main()
