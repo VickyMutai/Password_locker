@@ -92,6 +92,12 @@ without having to memorize??
 
         print("\n"*2)
 
+    save_user(create_user(username,pwdinput))
+    #create and save user credentials
+    print('\n' * 2)
+    print (f"New user {username} created.")
+    print('\n' * 2)
+
     print("To continue reenter your details")
     print("*"*78)
     print("Enter your username again: ")
